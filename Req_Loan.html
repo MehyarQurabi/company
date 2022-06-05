@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Request</title>
+    <link rel="stylesheet" href="Style.css" />
+    <script type="text/javascript" src="myFunction.js"></script>
+</head>
+<body align="center" onload="Captcha();">
+    <div class="area">
+        <form method="get" action="Result.html" name="MFURPM">
+            <div class="Mainform">
+                <br />
+                <br />
+                <label>Full Name:</label>
+                <br />
+                <input class="fullname" type="text"  name="full_name" id="fullname" onkeyup="checkName(this);" placeholder="Fullname" required>
+                <br />
+                <br />
+                <label>Nationalty Number: </label>
+                <br />
+                <input class="National" type="text" value="" id="ID" placeholder="Enter your ID" onchange="NationalID()" name="numberid" required>
+                <br />
+                <br />
+                <lable>Birthday Date:</lable>
+                <br />
+                <input class="Birthdate" type="date" placeholder="Enter your birthday" id="Birthday" name="Birth_date" required>
+                <br />
+                <br />
+                <lable>Mobail Number:</lable>
+                <br />
+                <input class="Num" type="tel" placeholder="Enter your phone no." id="Mobail" onchange="Mobail()"  name="phone_number" required>
+                <br />
+                <br />
+                <label>Email:</label>
+                <br />
+                <input class="Em" type="email" placeholder="someone@mail.com" id="Email" name="address" required>
+                <br />
+                <br />
+                <lable>Required Loan Value:</lable>
+                <br />
+                <input class="rlv" type="text" id="Payment" placeholder="Enter your Amount" onchange="LoanValue()" name="loan_number" required>
+                <br />
+                <br />
+                <lable>Type of loan requested:</lable>
+                <br />
+                <select class="T_Loan" type="text" id="Type" placeholder="Enter your Req Type" name="TYPEOFLOAN" onchange="" required>
+                    <option align="center">Educational Loan</option>
+                    <option align="center">Home Loan</option>
+                    <option align="center">Business Loan</option>
+                    <option align="center">
+                        Agricultural Loan
+                    </option>
+                    <option align="center">transport Loan</option>
+                    <option align="center">Workshop Loan</option>
+                </select>
+                <br />
+                <br />
+                <label>Number of loan years:</label>
+                <br />
+                <select class="YearsLoan" id="Years" name="loanyears" required>
+                    <option align="center">3</option>
+                    <option align="center">5</option>
+                    <option align="center">10</option>
+                    <option align="center">15</option>
+                    <option align="center">20</option>
+                </select> 
+                <br />
+                <br />
+                <label>Payment Method:</label>
+                <br />
+                <select class="methodpayback" type="text" id="MPayment" name="Loan_method" placeholder="Enter Your Payment" onchange="" required>
+                    <option>Monthly Payment</option>
+                    <option>Quarterly Payment</option>
+                    <option>Annual Payment</option>
+                </select>
+                <br />
+                <br />
+                <table align="center">
+                    <tr>
+                        <td>
+                            Text Captcha <br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" id="mainCaptcha" /> <br />
+                            <input type="button" id="refresh" value="Refresh" onclick="Captcha();" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" id="txtInput" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="submit" value="submit" id="button" onclick="alert(ValidCaptcha());" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
